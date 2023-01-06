@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.d2a71ce1.css",
-    "main.js": "/static/js/main.45ee7f64.js",
+    "main.css": "/static/css/main.54c2f265.css",
+    "main.js": "/static/js/main.0f49a8e1.js",
+    "static/media/b.png": "/static/media/b.e0d4623391a95d377e14.png",
+    "static/media/Products_Page.PNG": "/static/media/Products_Page.eada17652ff54b9f51e4.PNG",
+    "static/media/y.png": "/static/media/y.bf8db12a6e1be4a685cb.png",
     "static/media/Alal-Uddin-Resume.pdf": "/static/media/Alal-Uddin-Resume.1a8c99fd9b0fe4d602b2.pdf",
     "static/media/mypic.png": "/static/media/mypic.10ceade565e36072c3e9.png",
+    "static/media/lms.png": "/static/media/lms.7879c910e62cd7870771.png",
+    "static/media/s.jpg": "/static/media/s.8980685e53d07fa5b351.jpg",
     "index.html": "/index.html",
-    "main.d2a71ce1.css.map": "/static/css/main.d2a71ce1.css.map",
-    "main.45ee7f64.js.map": "/static/js/main.45ee7f64.js.map"
+    "main.54c2f265.css.map": "/static/css/main.54c2f265.css.map",
+    "main.0f49a8e1.js.map": "/static/js/main.0f49a8e1.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2a71ce1.css",
-    "static/js/main.45ee7f64.js"
+    "static/css/main.54c2f265.css",
+    "static/js/main.0f49a8e1.js"
   ]
 }
