@@ -1,20 +1,35 @@
 {
   "files": {
-    "main.css": "/static/css/main.5355b8ec.css",
-    "main.js": "/static/js/main.22d86cb8.js",
+    "main.css": "/static/css/main.b0ceab47.css",
+    "main.js": "/static/js/main.4ab06010.js",
     "static/media/b.png": "/static/media/b.e0d4623391a95d377e14.png",
     "static/media/Products_Page.PNG": "/static/media/Products_Page.eada17652ff54b9f51e4.PNG",
     "static/media/y.png": "/static/media/y.bf8db12a6e1be4a685cb.png",
     "static/media/Alal-Uddin-Resume.pdf": "/static/media/Alal-Uddin-Resume.1a8c99fd9b0fe4d602b2.pdf",
+    "static/media/so2.png": "/static/media/so2.445675a0a00c2757a1d6.png",
     "static/media/mypic.png": "/static/media/mypic.10ceade565e36072c3e9.png",
+    "static/media/redux.png": "/static/media/redux.1b4bb5fceb01b19da59d.png",
+    "static/media/so4.png": "/static/media/so4.4644a4b2b8ed5f538eec.png",
+    "static/media/chakraui.png": "/static/media/chakraui.15320604467d004df871.png",
+    "static/media/so5.png": "/static/media/so5.e3384d6ff9fda6414c9a.png",
     "static/media/lms.png": "/static/media/lms.7879c910e62cd7870771.png",
+    "static/media/so3.png": "/static/media/so3.ddf49384f01d0b6de6c0.png",
+    "static/media/so1.png": "/static/media/so1.697daf5b0a056e39d2ea.png",
+    "static/media/boostrap.png": "/static/media/boostrap.c5dedb5348b058d36661.png",
     "static/media/s.jpg": "/static/media/s.8980685e53d07fa5b351.jpg",
+    "static/media/css.png": "/static/media/css.1a57e67ac1fd2ea84d64.png",
+    "static/media/mongodb.png": "/static/media/mongodb.7a16fc61d457c9e340e2.png",
+    "static/media/nodejs.png": "/static/media/nodejs.8e341cc00e4ec40c6a27.png",
+    "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
+    "static/media/expressjs.webp": "/static/media/expressjs.5ee70a8e8ebddd86f2f7.webp",
+    "static/media/react.svg": "/static/media/react.4e0c97009b885bfa75c5412262a46f5f.svg",
+    "static/media/netlify.svg": "/static/media/netlify.74896431af95f4ab7d84bc511bbe7126.svg",
     "index.html": "/index.html",
-    "main.5355b8ec.css.map": "/static/css/main.5355b8ec.css.map",
-    "main.22d86cb8.js.map": "/static/js/main.22d86cb8.js.map"
+    "main.b0ceab47.css.map": "/static/css/main.b0ceab47.css.map",
+    "main.4ab06010.js.map": "/static/js/main.4ab06010.js.map"
   },
   "entrypoints": [
-    "static/css/main.5355b8ec.css",
-    "static/js/main.22d86cb8.js"
+    "static/css/main.b0ceab47.css",
+    "static/js/main.4ab06010.js"
   ]
 }
