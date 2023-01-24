@@ -167,7 +167,7 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} download>
+                              <a href={resume} target="_blank">
                                 <Button
                                   h="40px"
                                   fontFamily="Poppins"
@@ -262,7 +262,7 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} download>
+                              <a href={resume} target="_blank">
                                 <Button
                                   h="40px"
                                   fontFamily="Poppins"
