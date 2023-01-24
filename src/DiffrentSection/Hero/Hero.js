@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hero.css";
 import profile from "../../Images/mypic.png";
+import { saveAs } from 'file-saver';
 import { Box, Button, SimpleGrid, useColorMode } from "@chakra-ui/react";
 import resume from "../../Components/Navbar/Alal-Uddin-Resume.pdf";
 import Typewriter from "typewriter-effect";
@@ -60,7 +61,7 @@ export const Hero = () => {
                     </span>
                   </div>
 
-                  <a href={resume} download>
+                
                     <Button
                       mt={10}
                       h="50px"
@@ -75,10 +76,14 @@ export const Hero = () => {
                         color: "#dc143c",
                         border: "2px solid #dc143c",
                       }}
+
+                      onClick={()=>{
+                        saveAs(resume,"Alal-Uddin-Resume.pdf")
+                      }}
                     >
                       RESUME
                     </Button>
-                  </a>
+                
 
 
                 </div>

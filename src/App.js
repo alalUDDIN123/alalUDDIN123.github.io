@@ -4,9 +4,8 @@ import { Hero } from "./DiffrentSection/Hero/Hero";
 import { Projects } from "./DiffrentSection/Projects/Projects";
 import Calendar from "./DiffrentSection/Github/Calandar";
 import Skill from "./DiffrentSection/skills/Skills";
+import Contact from "./Components/Footer/Contact";
 
-
-// ❓
 
 function App() {
   return (
@@ -16,8 +15,9 @@ function App() {
       <Skill />
       <Projects />
       <Calendar />
+      <Contact />
    
-     
+   
     </div>
   );
 }

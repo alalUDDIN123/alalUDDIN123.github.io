@@ -77,7 +77,7 @@ const Navbar = () => {
                   </li>
                   <li>
 
-                    <a href={resume} download>
+                    <a href={resume} target="_blank" >
                       <Button
                         h="40px"
                         fontFamily="Poppins"
