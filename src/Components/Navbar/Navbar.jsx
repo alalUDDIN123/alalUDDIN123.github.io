@@ -9,6 +9,7 @@ import "./Navbar.css";
 import resume from "./Alal-Uddin-Resume.pdf";
 import { useMediaQuery } from "react-responsive";
 import { HiMenu } from "react-icons/hi";
+import { saveAs } from 'file-saver';
 
 import {
   Drawer,
@@ -90,12 +91,17 @@ const Navbar = () => {
                           color: "#dc143c",
                           border: "2px solid #dc143c",
                         }}
+                        onClick={() => {
+                          saveAs(resume, "Alal-Uddin-Resume.pdf")
+                        }}
                       >
                         RESUME
                       </Button>
                     </a>
                   </li>
-                 
+
+
+
                 </ul>
               </div>
             </div>
@@ -143,7 +149,7 @@ const Navbar = () => {
                       <DrawerOverlay />
                       <DrawerContent
                         style={{
-                          backgroundColor:"#edf2f8",
+                          backgroundColor: "#edf2f8",
                         }}
                       >
                         <DrawerCloseButton fontSize="30px" />
@@ -162,12 +168,12 @@ const Navbar = () => {
                             <li onClick={onClose}>
                               <a href="#project">PROJECT</a>
                             </li>
-                        
+
                             <li onClick={onClose}>
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} target="_blank">
+                              <a href={resume} target="_blank" >
                                 <Button
                                   h="40px"
                                   fontFamily="Poppins"
@@ -179,6 +185,9 @@ const Navbar = () => {
                                     background: "transparent",
                                     color: "#dc143c",
                                     border: "2px solid #dc143c",
+                                  }}
+                                  onClick={() => {
+                                    saveAs(resume, "Alal-Uddin-Resume.pdf")
                                   }}
                                 >
                                   RESUME
@@ -238,7 +247,7 @@ const Navbar = () => {
                       <DrawerOverlay />
                       <DrawerContent
                         style={{
-                          backgroundColor:"#edf2f8",
+                          backgroundColor: "#edf2f8",
                         }}
                       >
                         <DrawerCloseButton fontSize="30px" />
@@ -257,12 +266,12 @@ const Navbar = () => {
                             <li onClick={onClose}>
                               <a href="#project">PROJECT</a>
                             </li>
-                            
+
                             <li onClick={onClose}>
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} target="_blank">
+                              <a href={resume} target="_blank" >
                                 <Button
                                   h="40px"
                                   fontFamily="Poppins"
@@ -275,6 +284,9 @@ const Navbar = () => {
                                     color: "#dc143c",
                                     border: "2px solid #dc143c",
                                   }}
+                                  onClick={() => {
+                                    saveAs(resume, "Alal-Uddin-Resume.pdf")
+                                  }}
                                 >
                                   RESUME
                                 </Button>
@@ -286,7 +298,7 @@ const Navbar = () => {
                     </Drawer>
                   </div>
 
-                  
+
                 </Flex>
               </div>
             </div>

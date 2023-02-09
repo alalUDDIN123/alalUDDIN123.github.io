@@ -62,7 +62,7 @@ export const Hero = () => {
                   </div>
 
 
-                  <Button
+                  {/* <Button
                     mt={10}
                     h="50px"
                     fontFamily="Poppins"
@@ -79,11 +79,35 @@ export const Hero = () => {
 
                     onClick={() => {
                       saveAs(resume, "Alal-Uddin-Resume.pdf")
+                     
                     }}
                   >
                     RESUME
-                  </Button>
-                  
+                  </Button> */}
+
+                  <a href={resume} target="_blank" >
+                    <Button
+                       mt={10}
+                       h="50px"
+                       fontFamily="Poppins"
+                       w="150px"
+                       fontWeight="bold"
+                       fontSize="20px"
+                       color="white"
+                       bg="#dc143c"
+                       _hover={{
+                         background: "transparent",
+                         color: "#dc143c",
+                         border: "2px solid #dc143c",
+                       }}
+                      onClick={() => {
+                        saveAs(resume, "Alal-Uddin-Resume.pdf")
+                      }}
+                    >
+                      RESUME
+                    </Button>
+                  </a>
+
 
 
 
@@ -139,27 +163,29 @@ export const Hero = () => {
                       />
                     </span>
                   </div>
-                  <Button
-                    mt={10}
-                    h="50px"
-                    fontFamily="Poppins"
-                    w="150px"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="white"
-                    bg="#dc143c"
-                    _hover={{
-                      background: "transparent",
-                      color: "#dc143c",
-                      border: "2px solid #dc143c",
-                    }}
+                  <a href={resume} target="_blank" >
+                    <Button
+                       mt={10}
+                       h="50px"
+                       fontFamily="Poppins"
+                       w="150px"
+                       fontWeight="bold"
+                       fontSize="20px"
+                       color="white"
+                       bg="#dc143c"
+                       _hover={{
+                         background: "transparent",
+                         color: "#dc143c",
+                         border: "2px solid #dc143c",
+                       }}
+                      onClick={() => {
+                        saveAs(resume, "Alal-Uddin-Resume.pdf")
+                      }}
+                    >
+                      RESUME
+                    </Button>
+                  </a>
 
-                    onClick={() => {
-                      saveAs(resume, "Alal-Uddin-Resume.pdf")
-                    }}
-                  >
-                    RESUME
-                  </Button>
                 </div>
               </div>
             </Box>
@@ -205,27 +231,29 @@ export const Hero = () => {
                     </span>
                   </div>
 
-                  <Button
-                    mt={10}
-                    h="50px"
-                    fontFamily="Poppins"
-                    w="150px"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="white"
-                    bg="#dc143c"
-                    _hover={{
-                      background: "transparent",
-                      color: "#dc143c",
-                      border: "2px solid #dc143c",
-                    }}
-
-                    onClick={() => {
-                      saveAs(resume, "Alal-Uddin-Resume.pdf")
-                    }}
-                  >
-                    RESUME
-                  </Button>
+                    <a href={resume} target="_blank" >
+                    <Button
+                       mt={10}
+                       h="50px"
+                       fontFamily="Poppins"
+                       w="150px"
+                       fontWeight="bold"
+                       fontSize="20px"
+                       color="white"
+                       bg="#dc143c"
+                       _hover={{
+                         background: "transparent",
+                         color: "#dc143c",
+                         border: "2px solid #dc143c",
+                       }}
+                      onClick={() => {
+                        saveAs(resume, "Alal-Uddin-Resume.pdf")
+                      }}
+                    >
+                      RESUME
+                    </Button>
+                  </a>
+                  
                 </div>
               </div>
             </Box>
