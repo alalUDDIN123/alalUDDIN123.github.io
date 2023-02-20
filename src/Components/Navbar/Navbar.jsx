@@ -37,7 +37,13 @@ const Navbar = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  // "#edf2f8" : "#edf2f8",
+
+  const handleClick = () => {
+    window.open(
+      "/Alal-Uddin-Resume.pdf"
+    );
+  };
+
   return (
     <>
       {/* --------------------------Desktop--------------------------------------- */}
@@ -78,26 +84,17 @@ const Navbar = () => {
                   </li>
                   <li>
 
-                    <a href={resume} target="_blank" >
-                      <Button
-                        h="40px"
-                        fontFamily="Poppins"
-                        w="100px"
-                        fontSize="16px"
-                        color="white"
-                        bg="#dc143c"
-                        _hover={{
-                          background: "transparent",
-                          color: "#dc143c",
-                          border: "2px solid #dc143c",
-                        }}
-                        onClick={() => {
-                          saveAs(resume, "Alal-Uddin-Resume.pdf")
-                        }}
-                      >
-                        RESUME
-                      </Button>
-                    </a>
+
+                    <a target="_blank"
+                      href="Alal-Uddin-Resume.pdf"
+                      download="Alal-Uddin-Resume.pdf"
+                      onClick={handleClick}><button style={{
+                        backgroundColor: "#3500D3", color: "white",
+                        fontWeight: "bold", fontSize: "15px",
+                        cursor: "pointer", padding: "8px 15px",
+                        borderRadius: "15px",
+                        border: "3px solid rgba(11,12,16,0.4)"
+                      }} >Resume</button></a>
                   </li>
 
 
@@ -173,26 +170,16 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} target="_blank" >
-                                <Button
-                                  h="40px"
-                                  fontFamily="Poppins"
-                                  w="100px"
-                                  fontSize="16px"
-                                  color="white"
-                                  bg="#dc143c"
-                                  _hover={{
-                                    background: "transparent",
-                                    color: "#dc143c",
-                                    border: "2px solid #dc143c",
-                                  }}
-                                  onClick={() => {
-                                    saveAs(resume, "Alal-Uddin-Resume.pdf")
-                                  }}
-                                >
-                                  RESUME
-                                </Button>
-                              </a>
+                              <a target="_blank"
+                                href="Alal-Uddin-Resume.pdf"
+                                download="Alal-Uddin-Resume.pdf"
+                                onClick={handleClick}><button style={{
+                                  backgroundColor: "#3500D3", color: "white",
+                                  fontWeight: "bold", fontSize: "15px",
+                                  cursor: "pointer", padding: "8px 15px",
+                                  borderRadius: "15px",
+                                  border: "3px solid rgba(11,12,16,0.4)"
+                                }} >Resume</button></a>
                             </li>
                           </ul>
                         </DrawerBody>
@@ -271,26 +258,17 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href={resume} target="_blank" >
-                                <Button
-                                  h="40px"
-                                  fontFamily="Poppins"
-                                  w="100px"
-                                  fontSize="16px"
-                                  color="white"
-                                  bg="#dc143c"
-                                  _hover={{
-                                    background: "transparent",
-                                    color: "#dc143c",
-                                    border: "2px solid #dc143c",
-                                  }}
-                                  onClick={() => {
-                                    saveAs(resume, "Alal-Uddin-Resume.pdf")
-                                  }}
-                                >
-                                  RESUME
-                                </Button>
-                              </a>
+                              <a target="_blank"
+                                href="Alal-Uddin-Resume.pdf"
+                                download="Alal-Uddin-Resume.pdf"
+                                onClick={handleClick}>
+                                <button style={{
+                                  backgroundColor: "#3500D3", color: "white",
+                                  fontWeight: "bold", fontSize: "15px",
+                                  cursor: "pointer", padding: "8px 15px",
+                                  borderRadius: "15px",
+                                  border: "3px solid rgba(11,12,16,0.4)"
+                                }} >Resume</button></a>
                             </li>
                           </ul>
                         </DrawerBody>
