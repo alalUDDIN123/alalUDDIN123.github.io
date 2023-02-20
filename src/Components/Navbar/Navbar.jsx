@@ -9,7 +9,7 @@ import "./Navbar.css";
 import resume from "./Alal-Uddin-Resume.pdf";
 import { useMediaQuery } from "react-responsive";
 import { HiMenu } from "react-icons/hi";
-import { saveAs } from 'file-saver';
+
 
 import {
   Drawer,
@@ -18,6 +18,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
@@ -37,12 +38,6 @@ const Navbar = () => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-
-  const handleClick = () => {
-    window.open(
-      "/Alal-Uddin-Resume.pdf"
-    );
-  };
 
   return (
     <>
@@ -85,16 +80,34 @@ const Navbar = () => {
                   <li>
 
 
-                    <a target="_blank"
-                      href="Alal-Uddin-Resume.pdf"
-                      download="Alal-Uddin-Resume.pdf"
-                      onClick={handleClick}><button style={{
-                        backgroundColor: "#3500D3", color: "white",
-                        fontWeight: "bold", fontSize: "15px",
-                        cursor: "pointer", padding: "8px 15px",
+                    <button
+                      style={{
+                        backgroundColor: "#3500D3",
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "15px",
+                        cursor: "pointer",
+                        padding: "8px 15px",
                         borderRadius: "15px",
-                        border: "3px solid rgba(11,12,16,0.4)"
-                      }} >Resume</button></a>
+                        border: "3px solid rgba(11,12,16,0.4)",
+                      }}
+                      onClick={() =>
+                        window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                      }
+                    >
+                      <a
+                        href={resume}
+                        download="Alal-Uddin-Resume.pdf"
+                        style={{
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                      >
+                        Resume
+                      </a>
+                    </button>
+
+
                   </li>
 
 
@@ -170,16 +183,32 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a target="_blank"
-                                href="Alal-Uddin-Resume.pdf"
-                                download="Alal-Uddin-Resume.pdf"
-                                onClick={handleClick}><button style={{
-                                  backgroundColor: "#3500D3", color: "white",
-                                  fontWeight: "bold", fontSize: "15px",
-                                  cursor: "pointer", padding: "8px 15px",
+                              <button
+                                style={{
+                                  backgroundColor: "#3500D3",
+                                  color: "white",
+                                  fontWeight: "bold",
+                                  fontSize: "15px",
+                                  cursor: "pointer",
+                                  padding: "8px 15px",
                                   borderRadius: "15px",
-                                  border: "3px solid rgba(11,12,16,0.4)"
-                                }} >Resume</button></a>
+                                  border: "3px solid rgba(11,12,16,0.4)",
+                                }}
+                                onClick={() =>
+                                  window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                                }
+                              >
+                                <a
+                                  href={resume}
+                                  download="Alal-Uddin-Resume.pdf"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "inherit",
+                                  }}
+                                >
+                                  Resume
+                                </a>
+                              </button>
                             </li>
                           </ul>
                         </DrawerBody>
@@ -258,17 +287,32 @@ const Navbar = () => {
                               <a href="#contact">CONTACT</a>
                             </li>
                             <li onClick={onClose}>
-                              <a target="_blank"
-                                href="Alal-Uddin-Resume.pdf"
-                                download="Alal-Uddin-Resume.pdf"
-                                onClick={handleClick}>
-                                <button style={{
-                                  backgroundColor: "#3500D3", color: "white",
-                                  fontWeight: "bold", fontSize: "15px",
-                                  cursor: "pointer", padding: "8px 15px",
+                              <button
+                                style={{
+                                  backgroundColor: "#3500D3",
+                                  color: "white",
+                                  fontWeight: "bold",
+                                  fontSize: "15px",
+                                  cursor: "pointer",
+                                  padding: "8px 15px",
                                   borderRadius: "15px",
-                                  border: "3px solid rgba(11,12,16,0.4)"
-                                }} >Resume</button></a>
+                                  border: "3px solid rgba(11,12,16,0.4)",
+                                }}
+                                onClick={() =>
+                                  window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                                }
+                              >
+                                <a
+                                  href={resume}
+                                  download="Alal-Uddin-Resume.pdf"
+                                  style={{
+                                    textDecoration: "none",
+                                    color: "inherit",
+                                  }}
+                                >
+                                  Resume
+                                </a>
+                              </button>
                             </li>
                           </ul>
                         </DrawerBody>

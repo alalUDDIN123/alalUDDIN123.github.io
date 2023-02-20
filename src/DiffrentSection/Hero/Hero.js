@@ -3,7 +3,7 @@ import "./Hero.css";
 import profile from "../../Images/mypic.png";
 
 import { Box, Button, SimpleGrid, useColorMode } from "@chakra-ui/react";
-
+import resume from "../../Components/Navbar/Alal-Uddin-Resume.pdf";
 import Typewriter from "typewriter-effect";
 import { useMediaQuery } from "react-responsive";
 import SocialLinks from "./SocialLiks";
@@ -27,12 +27,6 @@ const Mobile = ({ children }) => {
 
 export const Hero = () => {
   const { colorMode } = useColorMode();
-
-  const handleClick = () => {
-    window.open(
-      "/Alal-Uddin-Resume.pdf"
-    );
-  };
 
   return (
     <>
@@ -71,29 +65,36 @@ export const Hero = () => {
                   </div>
 
 
-                  <a target="_blank"
-                    href="Alal-Uddin-Resume.pdf"
-                    download="Alal-Uddin-Resume.pdf"
-                    onClick={handleClick}>
-                    <Button
-                      mt={10}
-                      h="50px"
-                      fontFamily="Poppins"
-                      w="150px"
-                      fontWeight="bold"
-                      fontSize="20px"
-                      color="white"
-                      bg="#dc143c"
-                      _hover={{
-                        background: "transparent",
-                        color: "#dc143c",
-                        border: "2px solid #dc143c",
-                      }}
 
-                    >
-                      RESUME
-                    </Button>
-                  </a>
+                  <Button
+                    mt={10}
+                    h="50px"
+                    fontFamily="Poppins"
+                    w="150px"
+                    fontWeight="bold"
+                    fontSize="20px"
+                    color="white"
+                    bg="#dc143c"
+                    _hover={{
+                      background: "transparent",
+                      color: "#dc143c",
+                      border: "2px solid #dc143c",
+                    }}
+                    onClick={() => {
+                      window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                      const link = document.createElement('a');
+                      link.href = resume;
+                      link.download = 'Alal-Uddin-Resume.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    RESUME
+                  </Button>
+
+
+
 
 
 
@@ -150,30 +151,32 @@ export const Hero = () => {
                       />
                     </span>
                   </div>
-                  <a target="_blank"
-                    href="Alal-Uddin-Resume.pdf"
-                    download="Alal-Uddin-Resume.pdf"
-                    onClick={handleClick}>
-                    <Button
-                      mt={10}
-                      h="50px"
-                      fontFamily="Poppins"
-                      w="150px"
-                      fontWeight="bold"
-                      fontSize="20px"
-                      color="white"
-                      bg="#dc143c"
-                      _hover={{
-                        background: "transparent",
-                        color: "#dc143c",
-                        border: "2px solid #dc143c",
-                      }}
-
-                    >
-                      RESUME
-                    </Button>
-                  </a>
-
+                  <Button
+                    mt={10}
+                    h="50px"
+                    fontFamily="Poppins"
+                    w="150px"
+                    fontWeight="bold"
+                    fontSize="20px"
+                    color="white"
+                    bg="#dc143c"
+                    _hover={{
+                      background: "transparent",
+                      color: "#dc143c",
+                      border: "2px solid #dc143c",
+                    }}
+                    onClick={() => {
+                      window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                      const link = document.createElement('a');
+                      link.href = resume;
+                      link.download = 'Alal-Uddin-Resume.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    RESUME
+                  </Button>
                 </div>
               </div>
             </Box>
@@ -219,29 +222,32 @@ export const Hero = () => {
                     </span>
                   </div>
 
-                  <a target="_blank"
-                    href="Alal-Uddin-Resume.pdf"
-                    download="Alal-Uddin-Resume.pdf"
-                    onClick={handleClick}>
-                    <Button
-                      mt={10}
-                      h="50px"
-                      fontFamily="Poppins"
-                      w="150px"
-                      fontWeight="bold"
-                      fontSize="20px"
-                      color="white"
-                      bg="#dc143c"
-                      _hover={{
-                        background: "transparent",
-                        color: "#dc143c",
-                        border: "2px solid #dc143c",
-                      }}
-
-                    >
-                      RESUME
-                    </Button>
-                  </a>
+                  <Button
+                    mt={10}
+                    h="50px"
+                    fontFamily="Poppins"
+                    w="150px"
+                    fontWeight="bold"
+                    fontSize="20px"
+                    color="white"
+                    bg="#dc143c"
+                    _hover={{
+                      background: "transparent",
+                      color: "#dc143c",
+                      border: "2px solid #dc143c",
+                    }}
+                    onClick={() => {
+                      window.open("https://drive.google.com/file/d/1goPXMmMZch2BE5mz-eLAcwAyyOTvBRso/view?usp=sharing")
+                      const link = document.createElement('a');
+                      link.href = resume;
+                      link.download = 'Alal-Uddin-Resume.pdf';
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  >
+                    RESUME
+                  </Button>
 
                 </div>
               </div>
