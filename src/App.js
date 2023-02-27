@@ -5,6 +5,7 @@ import { Projects } from "./DiffrentSection/Projects/Projects";
 import Calendar from "./DiffrentSection/Github/Calandar";
 import Skill from "./DiffrentSection/skills/Skills";
 import Contact from "./Components/Footer/Contact";
+import About from "./DiffrentSection/About/About";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <About />
       <Skill />
       <Projects />
       <Calendar />

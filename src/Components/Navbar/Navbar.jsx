@@ -66,7 +66,7 @@ const Navbar = () => {
                     <a href="#">HOME</a>
                   </li>
                   <li>
-                    <a href="#"> ABOUT</a>
+                    <a href="#about"> ABOUT ME </a>
                   </li>
                   <li>
                     <a href="#skills">SKILLS</a>
@@ -170,7 +170,7 @@ const Navbar = () => {
                               <a href="#">HOME</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href="#"> ABOUT</a>
+                              <a href="#about"> ABOUT ME</a>
                             </li>
                             <li onClick={onClose}>
                               <a href="#skills">SKILLS</a>
@@ -274,7 +274,7 @@ const Navbar = () => {
                               <a href="#">HOME</a>
                             </li>
                             <li onClick={onClose}>
-                              <a href="#"> ABOUT</a>
+                              <a href="#about"> ABOUT ME</a>
                             </li>
                             <li onClick={onClose}>
                               <a href="#skills">SKILLS</a>

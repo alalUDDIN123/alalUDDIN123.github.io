@@ -78,6 +78,7 @@
 .skills_grid_box img {
     width: 50%;
     height: 60%;
+    object-fit: contain;
 }
 
 .skills_grid_box_dark img {
