@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.649edce7.css",
-    "main.js": "/static/js/main.1460d644.js",
+    "main.css": "/static/css/main.390cd931.css",
+    "main.js": "/static/js/main.0d305697.js",
     "static/media/b.png": "/static/media/b.e0d4623391a95d377e14.png",
     "static/media/Products_Page.PNG": "/static/media/Products_Page.eada17652ff54b9f51e4.PNG",
     "static/media/y.png": "/static/media/y.bf8db12a6e1be4a685cb.png",
@@ -23,13 +23,12 @@
     "static/media/html.png": "/static/media/html.6e930594286d8afe4c79.png",
     "static/media/expressjs.webp": "/static/media/expressjs.5ee70a8e8ebddd86f2f7.webp",
     "static/media/react.svg": "/static/media/react.4e0c97009b885bfa75c5412262a46f5f.svg",
-    "static/media/netlify.svg": "/static/media/netlify.74896431af95f4ab7d84bc511bbe7126.svg",
     "index.html": "/index.html",
-    "main.649edce7.css.map": "/static/css/main.649edce7.css.map",
-    "main.1460d644.js.map": "/static/js/main.1460d644.js.map"
+    "main.390cd931.css.map": "/static/css/main.390cd931.css.map",
+    "main.0d305697.js.map": "/static/js/main.0d305697.js.map"
   },
   "entrypoints": [
-    "static/css/main.649edce7.css",
-    "static/js/main.1460d644.js"
+    "static/css/main.390cd931.css",
+    "static/js/main.0d305697.js"
   ]
 }
