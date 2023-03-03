@@ -10,7 +10,7 @@ function Calendar() {
     <div className="calendar">
       <div className="head_text">
         <h2>
-          Github <span>Calendar</span>
+          Github <span>Activity</span>
         </h2>
       </div>
       <div className="Graph">
@@ -19,7 +19,7 @@ function Calendar() {
     </div>
 
     <div className="head_text">
-      <h2>My <span> Statastics</span></h2>
+      {/* <h2>My <span>Static</span></h2> */}
     </div>
 
       <div className='stats'>

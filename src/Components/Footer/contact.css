@@ -67,7 +67,7 @@
 
 .contact-widget-item {
     overflow: hidden;
-    margin-bottom: 40px;
+    /* margin-bottom: 10px; */
 }
 
 .icon {
@@ -101,7 +101,7 @@
     margin-bottom: 6px;
 }
 
-.text p {
+.text p{
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: #111;

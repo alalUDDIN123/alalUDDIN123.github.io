@@ -42,17 +42,14 @@
 
 ## Project Section 
 
-<img src="https://i.pinimg.com/originals/b9/e9/d7/b9e9d7efaaa86546e8e2d59390944608.png" alt="skill Section">
+<img src="https://i.pinimg.com/originals/b9/e9/d7/b9e9d7efaaa86546e8e2d59390944608.png" alt="Project Section">
 
 
 ## Github Activity
 
-<img src="https://i.pinimg.com/originals/d7/c2/fa/d7c2fa4c7ce700a3ba54a181f277a4fb.png" alt="skill Section">
+<img src="https://i.pinimg.com/originals/d7/c2/fa/d7c2fa4c7ce700a3ba54a181f277a4fb.png" alt="Github Activity">
 
 
-## Contact Section 
-
-<img src="https://i.pinimg.com/originals/68/2f/10/682f10c6b070552bbb59aabeb14539ed.png" alt="skill Section">
 <br>
 <br>
 

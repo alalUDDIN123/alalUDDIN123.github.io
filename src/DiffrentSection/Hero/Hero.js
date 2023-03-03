@@ -1,12 +1,13 @@
 import React from "react";
 import "./Hero.css";
 import profile from "../../Images/mypic.png";
-
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Box, Button, SimpleGrid, useColorMode } from "@chakra-ui/react";
 import resume from "../../Components/Navbar/Alal-Uddin-Resume.pdf";
 import Typewriter from "typewriter-effect";
 import { useMediaQuery } from "react-responsive";
-import SocialLinks from "./SocialLiks";
+// import SocialLinks from "./SocialLiks";
+
 
 
 const Desktop = ({ children }) => {
@@ -92,15 +93,11 @@ export const Hero = () => {
                   >
                     RESUME
                   </Button>
-
-
-
-
-
-
-
                 </div>
+
               </div>
+
+
             </Box>
 
             <Box height="auto">
@@ -178,7 +175,10 @@ export const Hero = () => {
                     RESUME
                   </Button>
                 </div>
+
               </div>
+
+
             </Box>
           </SimpleGrid>
 
@@ -250,12 +250,13 @@ export const Hero = () => {
                   </Button>
 
                 </div>
+
               </div>
             </Box>
           </SimpleGrid>
         </div>
       </Mobile>
-      <SocialLinks />
+      {/* <SocialLinks /> */}
     </>
   );
 };

@@ -21,28 +21,9 @@ body {
   padding: 130px 0 200px 0;
 }
 
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-		transform: translatey(0px);
-	}
-}
-
-
-
-
-
 
 .home_box_img {
-  height: 330px;
+  height: 320px;
   width: 300px;
   box-shadow: 10px 10px 300px 66px rgba(222,42,222,1);
   cursor: pointer;
@@ -54,7 +35,7 @@ body {
   width: 100%;
   border-radius: 1%;
   transform: translatey(10px);
-	animation: float 1s ease-in-out infinite;
+
 }
 
 /* ------------------------ Home text--------------------------- */

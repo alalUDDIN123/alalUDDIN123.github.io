@@ -166,7 +166,7 @@ export const Projects = () => {
                   </div>
                   <div className="deploy_link">
                     <a
-                      href="https://celebrated-eclair-025aac.netlify.app/"
+                      href="https://youtubeminiapp.vercel.app/"
                       rel="noopener norefferer"
                       target="_blank"
                     >
