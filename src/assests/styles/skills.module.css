@@ -1,0 +1,101 @@
+.skillsContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skillsHeadingWrapper {
+  text-align: center;
+}
+
+.skillsHeading {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #8bf50d;
+}
+
+.skillsHeadingWrapper::after {
+  content: "*My Skills, My Strength*";
+  display: block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #97bf1e;
+}
+
+.skillsFilterBar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skillsFilterBar button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.skillsFilterBar button.activeFilter {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.skillsData {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill {
+  flex: 0 0 calc(33.33% - 20px);
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.skill p:first-child {
+  font-weight: bold;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skillInfoProgressLine {
+  height: 10px;
+  border-radius: 5px;
+  width: 0;
+}
+
+
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .skillsContainer {
+    padding: 10px;
+  }
+
+  .skill {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+/* Media query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .skillsContainer {
+    padding: 5px;
+  }
+
+  .skill {
+    flex: 0 0 100%;
+  }
+}

@@ -1,0 +1,148 @@
+.main_container {
+  padding: 60px 0;
+}
+
+.project_container {
+  width: 80%;
+  margin: auto;
+}
+
+.project_heading .title {
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 25px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+
+.project_heading .title::after {
+  content: "___Recently Worked Projects___";
+  display: block;
+  font-size: 20px;
+  color: yellow;
+  margin: 15px 0px;
+}
+
+.project_box {
+  padding: 20px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 8rem rgba(255, 255, 255, 1.6);
+}
+.project_box:hover{
+    box-shadow: 0 0 8rem rgba(255, 255, 255, 0.5);
+}
+.project_image img {
+  border-radius: 10px;
+  height: 170px;
+  transition: transform 0.5s linear;
+}
+/* .project_box :hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in;
+} */
+
+.project_name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px 0;
+  color: yellow;
+}
+
+.project_tech_stack {
+  padding: 10px 0;
+}
+
+.project_tech_stack h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: gainsboro;
+}
+
+.project_tech_stack span {
+  font-size: 15px;
+  color: yellow;
+  font-weight: 500;
+}
+
+/* button link project css */
+
+.project_icon {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.github_link,
+.deploy_link {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #08aaf5ab;
+}
+.github_link:hover,
+.deploy_link:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+} 
+
+.project_icon a {
+  color: rgb(255, 251, 251);
+  font-size: 17px;
+  text-decoration: none;
+}
+
+/*  */
+
+.project_desc p {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Projects.css */
+.project_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* Add a media query for tablets */
+@media screen and (max-width: 1024px) {
+  .project_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 568px) {
+  .project_grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+/* Style for project_box and other elements goes here */
+
+@media screen and (max-width: 640px) {
+  .project_heading .title {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .project_heading .title::before {
+    display: none;
+  }
+
+  .project_heading .title::after {
+    display: none;
+  }
+}
