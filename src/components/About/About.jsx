@@ -16,18 +16,18 @@ const About = () => {
 
                     <div className="__about__img__">
                         <img src={myImg} alt="Alal Uddin" />
-                        {/* <span className="__circle__round__one__"></span>
-                        <span className="__circle__round__two__"></span> */}
                     </div>
 
                     <div className="__about__content__">
                         <h3>Software Engineer</h3>
-                        <p>I'm Alal Uddin, a proficient software engineer with a deep passion for crafting exceptional web solutions.
-                            My mission is to create web applications that simplify and enhance the lives of others.
-                            My expertise covers a diverse range of technologies, including NodeJS,
-                            ExpressJS, MongoDB, Mongoose, ReactJS, Angular, JavaScript, HTML, and CSS.
-                            Beyond my technical skills, I'm dedicated to staying at the forefront of industry trends and best practices.
-                            I look forward to leveraging my skills and experience to create innovative solutions that meet business goals.</p>
+                        <p>
+                            I'm Alal Uddin, a software engineer with a keen passion for crafting web solutions that enhance user experiences.
+                            My skills extend to technologies like NodeJS, ExpressJS, MongoDB, ReactJS, Angular, JavaScript, HTML, and CSS.
+                            I'm committed to staying abreast of industry trends and best practices, ensuring that I can provide innovative
+                            and custom-tailored solutions that perfectly align with your business objectives.I keep my finger on the pulse
+                            of industry trends and best practices, all to cook up creative solutions that perfectly match your business needs..
+
+                        </p>
                     </div>
 
 

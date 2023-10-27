@@ -1,30 +1,30 @@
-const l1 ="https://alaluddin123.github.io/static/media/lms_a1.7879c910e62cd7870771.png"
-const l2 ="https://alaluddin123.github.io/static/media/lms_a3.fd3be0ab733cb85162d6.gif"
-const l3 ="https://alaluddin123.github.io/static/media/lms_a1.7879c910e62cd7870771.png"
+const l1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const l2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const l3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
 
-const myShop1 ="https://alaluddin123.github.io/static/media/myShop1.ead9091175968d1e0153.gif"
-const myShop2 ="https://alaluddin123.github.io/static/media/myShop2.764522ad7a4b078ce6a4.gif"
-const myShop3 ="https://alaluddin123.github.io/static/media/myShop3.22f8b14f404f04160ede.gif"
+const myShop1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const myShop2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const myShop3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
 
-const bewa1 ="https://alaluddin123.github.io/static/media/bewa1.e0d4623391a95d377e14.png"
-const bewa2 ="https://alaluddin123.github.io/static/media/bewa2.18376a1005a3be15cf9b.gif"
-const bewa3 ="https://alaluddin123.github.io/static/media/bewa3.f9baea8a82383e207269.gif"
+const bewa1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const bewa2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const bewa3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
 
-const angular_imag1 ="https://alaluddin123.github.io/static/media/an1-ecom.4127ccd54595e274302d.gif"
-const angular_imag2 ="https://alaluddin123.github.io/static/media/an3-ecom.aaebe75c44cf7b11c3bb.gif"
-const angular_imag3 ="https://alaluddin123.github.io/static/media/an2-ecom.a0800b0fba4e9a5b574f.gif"
+const angular_imag1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const angular_imag2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const angular_imag3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
-const duk1 ="https://alaluddin123.github.io/static/media/dukan1.c0d79f2dcb6cbd5a79b6.gif"
-const duk2 ="https://alaluddin123.github.io/static/media/dukan2.e0d82a7def76b8696cc0.gif"
-const duk3 ="https://alaluddin123.github.io/static/media/dukan3.5cb93b077fe4a0dc35ff.gif"
+const duk1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const duk2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const duk3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
 
-const you1 ="https://alaluddin123.github.io/static/media/you1.bf8db12a6e1be4a685cb.png"
-const you2 ="https://alaluddin123.github.io/static/media/you2.b08cd70b9faa0acd8eac.gif"
-const you3 ="https://alaluddin123.github.io/static/media/you1.bf8db12a6e1be4a685cb.png"
+const you1 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const you2 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
+const you3 ="https://api.ahatechnocrats.com/wp-content/uploads/2021/05/bewa1.png"
 
 
 
