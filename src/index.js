@@ -1,14 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import ReactDOM from "react-dom/client";
+
 import App from "./App";
 
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 
-
-ReactDOM.render(
-  <>
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <ChakraProvider>
+    <ColorModeScript initialColorMode="light"></ColorModeScript>
     <App />
-  </>,
-  document.getElementById("root")
+  </ChakraProvider>
 );
-
