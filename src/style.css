@@ -114,10 +114,6 @@ button:focus {
 }
 
 
-.home-header{
-   width: 55.333333% !important;
-}
-
 
 
 
@@ -268,25 +264,6 @@ button:focus {
 
 /* navbar css end */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.home-header {
-  padding-top: 80px !important;
-}
 
 .home-section {
   position: relative;
