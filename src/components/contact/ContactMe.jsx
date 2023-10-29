@@ -7,7 +7,7 @@ import Iframe from "react-iframe";
 
 const ContactMe = () => {
   return (
-    <div>
+    <>
       <section className={styles.contactMe} id="contact">
         <div className={styles.contactUs}>
           <h2 className={styles.title}>Contact Me</h2>
@@ -117,7 +117,7 @@ const ContactMe = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

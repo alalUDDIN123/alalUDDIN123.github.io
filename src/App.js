@@ -8,12 +8,13 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
+
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Preloader from "./components/Preloader/Preloader";
 import NavBar from "./components/navbar/navb";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -28,16 +29,21 @@ function App() {
 
   return (
     <Router>
-      {/* <Preloader load={load} /> */}
+          
       <Preloader load={load} />
+
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <NavBar />
-        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
- 
+
         </Routes>
         <Footer />
+
+
+        {/* scroll to top */}
+
+        <ScrollToTop />
       </div>
     </Router>
   );

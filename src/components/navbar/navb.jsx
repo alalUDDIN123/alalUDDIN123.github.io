@@ -114,7 +114,7 @@ function NavBar() {
             <Nav.Item className={activeSection === "skills" ? "__navbar__active__item" : ""}>
               <Link
                 className="__nav__link__react__smooth__"
-                to="skill"
+                to="skills"
                 onClick={() => updateExpanded(false)}
                 smooth
                 duration={500}>
@@ -139,7 +139,7 @@ function NavBar() {
             <Nav.Item className={activeSection === "contact" ? "__navbar__active__item" : ""}>
               <Link
                 className="__nav__link__react__smooth__"
-                to="contacts"
+                to="contact"
                 smooth
                 duration={500}
                 onClick={() => updateExpanded(false)}

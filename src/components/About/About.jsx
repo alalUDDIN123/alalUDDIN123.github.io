@@ -24,8 +24,8 @@ const About = () => {
                             I'm Alal Uddin, a software engineer with a keen passion for crafting web solutions that enhance user experiences.
                             My skills extend to technologies like NodeJS, ExpressJS, MongoDB, ReactJS, Angular, JavaScript, HTML, and CSS.
                             I'm committed to staying abreast of industry trends and best practices, ensuring that I can provide innovative
-                            and custom-tailored solutions that perfectly align with your business objectives.I keep my finger on the pulse
-                            of industry trends and best practices, all to cook up creative solutions that perfectly match your business needs..
+                            and custom-tailored solutions that perfectly align with business objectives.I keep my finger on the pulse
+                            of industry trends and best practices, all to cook up creative solutions that perfectly match your business needs.
 
                         </p>
                     </div>
