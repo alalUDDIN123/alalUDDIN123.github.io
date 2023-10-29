@@ -76,21 +76,19 @@
   width: 0;
 }
 
-
-
 /* Media query for screens with a maximum width of 768px */
 @media (max-width: 768px) {
-  .skillsContainer {
-    padding: 10px;
-  }
-
-  .skill {
-    flex: 0 0 calc(50% - 10px);
+  .skillsData {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Media query for screens with a maximum width of 480px */
 @media (max-width: 480px) {
+  .skillsData {
+    display: flex;
+  }
   .skillsContainer {
     padding: 5px;
   }
