@@ -2,8 +2,9 @@ import React from "react";
 import styles from "../../assests/styles/contactme.module.css"
 import { MdLocationOn } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
-import { AiFillPhone } from "react-icons/ai";
+import { AiFillPhone, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Iframe from "react-iframe";
+
 
 const ContactMe = () => {
   return (
@@ -89,13 +90,13 @@ const ContactMe = () => {
                     <span className={styles.green}>IA</span>
                   </p>
                 </div>
-
                 <div>
                   <span>
                     <HiMail />
                   </span>
-                  <a href="mailto:alalu75666@gmail.com">alalu75666@gmail.com</a>
+                  <a href="mailto:alalu75666@gmail.com" target="_blank" rel="noreferrer">alalu75666@gmail.com</a>
                 </div>
+
 
                 <div>
                   <span>
@@ -103,6 +104,24 @@ const ContactMe = () => {
                   </span>
                   <a href="tel:+917061901868">+91 60025 65574</a>
                 </div>
+
+                <div>
+                  <span>
+                    <AiFillLinkedin />
+                  </span>
+
+                  <a href="https://www.linkedin.com/in/alal-uddin-066444206/" target="_blank" rel="noreferrer"> LinkedIn</a>
+
+                </div>
+
+                <div>
+                  <span>
+                    <AiFillGithub />
+                  </span>
+                  <a href="https://github.com/alalUDDIN123" target="_blank" rel="noreferrer"> Github</a>
+
+                </div>
+
               </div>
             </div>
 
