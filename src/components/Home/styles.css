@@ -116,7 +116,7 @@
   }
 
   .__about__img__ img {
-    width: 90%;
+    width: 90% !important;
   }
 
   .__about__content__ {
