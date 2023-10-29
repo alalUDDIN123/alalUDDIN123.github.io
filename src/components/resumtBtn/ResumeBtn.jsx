@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Nav, } from 'react-bootstrap'
-import styles from "../assests/styles/navbar.module.css"
+import styles from "../../assests/styles/navbar.module.css"
 const ResumeBtn = ({ title }) => {
     return (
         <>

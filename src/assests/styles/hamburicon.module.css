@@ -1,0 +1,46 @@
+/* Initial styling - hide the hamburger icon */
+.__pure_css_hamburger__icons {
+  display: none;
+  cursor: pointer;
+}
+
+.__pure_css_hamburger__icons span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+/* Pseudo-elements to create the close icon */
+.__pure_css_hamburger__icons.active span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  transition: 0.4s;
+  top: 0;
+  left: 0;
+}
+
+.__pure_css_hamburger__icons.active span:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: rotate(-45deg);
+  transition: 0.4s;
+  bottom: 0;
+  left: 0;
+}
+
+/* Media query for tablet or smaller screens */
+@media (max-width: 768px) {
+  .__pure_css_hamburger__icons {
+    display: block;
+  }
+}

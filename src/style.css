@@ -23,31 +23,10 @@ button:focus {
   box-shadow: none !important;
 }
 
-/* --------- */
-/*  Preloader */
-/* --------- */
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999999;
-  background-color: #0c0513;
-  background-image: url(./assests/pre.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#preloader-none {
-  opacity: 0;
-}
-
 #no-scroll {
   overflow: hidden;
   height: 100vh;
 }
-
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -70,41 +49,6 @@ button:focus {
   border-radius: 12px;
 }
 
-
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -113,156 +57,16 @@ button:focus {
   height: 100%;
 }
 
+/* sticky nav css start */
 
-
-
-
-/* navbar css start */
-
-
-
-
-
-.sticky {
-  background-color: #08aaf5ab !important;
-  transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 38, 51, 0.507) !important;
-  backdrop-filter: blur(15px) !important;
-}
-
-.navbar {
-  position: fixed !important;
-  transition: all 0.3s ease-out 0s !important;
-  padding: 0.3rem 2rem !important;
-  font-size: 1.2rem !important;
-}
-
-.navbar-toggler {
-  position: relative !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
-}
-
-.__navbar__active__item {
-  border-bottom: 2px solid white !important;
-}
-
-.navbar-toggler span {
-  display: block !important;
-  background-color: white !important;
-  height: 4px !important;
-  width: 27px !important;
-  margin-top: 5px !important;
-  margin-bottom: 5px !important;
-  transform: rotate(0deg) !important;
-  left: 0 !important;
-  opacity: 1 !important;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: 0 !important;
-}
-
-.navbar-toggler span:nth-child(1),
-.navbar-toggler span:nth-child(3) {
-  transition: transform 0.35s ease-in-out !important;
-  transition: transform 0.35s ease-in-out !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
-  position: absolute !important;
-  left: 12px !important;
-  top: 10px !important;
-  transform: rotate(135deg) !important;
-  opacity: 0.9 !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
-  height: 12px !important;
-  visibility: hidden !important;
-  background-color: transparent !important;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
-  position: absolute !important;
-  left: 12px !important;
-  top: 10px !important;
-  transform: rotate(-135deg) !important;
-  opacity: 0.9 !important;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem 2rem !important;
-    font-size: 1.4rem !important;
-    background-color: hsla(204, 93%, 50%, 0.983) !important;
-  }
-
-  .navbar-nav {
-    gap: 20px;
-  }
-
-  .navbar-nav .nav-item a::after {
-    display: none !important;
-  }
-}
-
-.navbar-brand {
-  color: rgb(250, 250, 250) !important;
-}
-.navbar-nav .__nav__link__react__smooth__ {
-  color: white !important;
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
-  text-decoration: none !important;
-  cursor: pointer !important;
-}
-
-.nav-link {
-  padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 768px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
-}
-
-.navbar-nav .nav-item {
-  position: relative;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar-nav .nav-item a {
-  font-weight: 400;
-  transition: all 0.3s ease-out 0s;
-  position: relative;
-  z-index: 1;
-}
-
-.navbar-nav .nav-item a::after {
-  content: "";
-  position: relative;
-  display: block;
-  height: 5px;
-  width: 0;
-  border-radius: 16px;
-  background: #f5f5f5;
-  bottom: 1px;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s ease-out 0s;
-}
-
-.navbar-nav .nav-item a:hover::after {
+.__navbar__sticky {
+  background-color: #4e2aa1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
-/* navbar css end */
+/* sticky nav css end */
+
 
 
 .home-section {
@@ -329,8 +133,6 @@ button:focus {
   }
 }
 
-
-
 /* --------- */
 /* Footer */
 /* --------- */
@@ -374,7 +176,6 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
-
 
 /* --------- */
 /* About */
@@ -436,6 +237,3 @@ button:focus {
     padding-top: 0 !important;
   }
 }
-
-
-

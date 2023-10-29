@@ -1,0 +1,209 @@
+.__navbar__Items button {
+    background-color: #007bff !important;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 22px;
+    margin-top: -1%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    margin-right: 2rem;
+  }
+  
+  .__navbar__Items button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  .__navbar__Items button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  .__navbar__Items button::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes gradientFlow {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  
+  
+  /* navbar css start */
+  
+  
+  
+  
+  
+  .sticky {
+    background-color: #08aaf5ab !important;
+    transition: all 0.3s ease-out 0s !important;
+    box-shadow: 0px 10px 10px 0px rgba(9, 38, 51, 0.507) !important;
+    backdrop-filter: blur(15px) !important;
+  }
+  
+  .navbar {
+    position: fixed !important;
+    transition: all 0.3s ease-out 0s !important;
+    padding: 0.3rem 2rem !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .navbar-toggler {
+    position: relative !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+  }
+  
+  .__navbar__active__item {
+    border-bottom: 2px solid white !important;
+  }
+  
+  .navbar-toggler span {
+    display: block !important;
+    background-color: white !important;
+    height: 4px !important;
+    width: 27px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    transform: rotate(0deg) !important;
+    left: 0 !important;
+    opacity: 1 !important;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    outline: 0 !important;
+  }
+  
+  .navbar-toggler span:nth-child(1),
+  .navbar-toggler span:nth-child(3) {
+    transition: transform 0.35s ease-in-out !important;
+    transition: transform 0.35s ease-in-out !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute !important;
+    left: 12px !important;
+    top: 10px !important;
+    transform: rotate(135deg) !important;
+    opacity: 0.9 !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px !important;
+    visibility: hidden !important;
+    background-color: transparent !important;
+  }
+  
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute !important;
+    left: 12px !important;
+    top: 10px !important;
+    transform: rotate(-135deg) !important;
+    opacity: 0.9 !important;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem 2rem !important;
+      font-size: 1.4rem !important;
+      background-color: hsla(204, 93%, 50%, 0.983) !important;
+    }
+  
+    .navbar-nav {
+      gap: 20px;
+    }
+  
+    .navbar-nav .nav-item a::after {
+      display: none !important;
+    }
+  }
+  
+  .navbar-brand {
+    color: rgb(250, 250, 250) !important;
+  }
+  .navbar-nav .__nav__link__react__smooth__ {
+    color: white !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+  }
+  
+  .nav-link {
+    padding: 0.8rem 1rem !important;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-link {
+      padding: 0.7rem 1rem !important;
+    }
+  }
+  
+  .navbar-nav .nav-item {
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar-nav .nav-item a {
+    font-weight: 400;
+    transition: all 0.3s ease-out 0s;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .navbar-nav .nav-item a::after {
+    content: "";
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 0;
+    border-radius: 16px;
+    background: #f5f5f5;
+    bottom: 1px;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease-out 0s;
+  }
+  
+  .navbar-nav .nav-item a:hover::after {
+    width: 100%;
+  }
+  
+  /* navbar css end */
+  

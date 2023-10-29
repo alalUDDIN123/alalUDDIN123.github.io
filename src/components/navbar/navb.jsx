@@ -12,9 +12,10 @@ import {
 } from "react-icons/ai";
 import { FaUserTie } from "react-icons/fa"
 import { Link } from "react-scroll";
-import styles from "../assests/styles/navbar.module.css"
-import ResumeBtn from "./ResumeBtn.jsx";
+import styles from "../../assests/styles/c.css"
+
 import { useEffect } from "react";
+import ResumeBtn from "../resumtBtn/ResumeBtn";
 
 
 function NavBar() {

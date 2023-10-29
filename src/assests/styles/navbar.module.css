@@ -1,13 +1,72 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  padding: 10px 10%;
+  z-index: 1000;
+}
+.__navbar__logo__ > a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.__navbar__logo__ > h1 {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.___navbar__Items {
+  display: flex;
+  align-items: center;
+}
+
+.__navbar__Item {
+  display: flex;
+}
+
+.__nav__item__each {
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s;
+}
+.__nav__item__each::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background-color: #fff8f8;
+  bottom: -5px;
+  left: 0;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.__nav__item__each:hover::after {
+  width: 100%;
+}
+
+.__nav__item__each svg {
+  margin-right: 8px;
+}
+
+/* resume btn css start */
+
 .__navbar__Items button {
   background-color: #007bff !important;
   border: none;
   border-radius: 4px;
-  padding: 8px 22px;
-  margin-top: -1%;
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  margin-right: 2rem;
 }
 
 .__navbar__Items button a {
@@ -49,11 +108,13 @@
   }
 }
 
-@keyframes gradientFlow {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
+/* resume btn css end */
+
+
+
+/* Small Devices (e.g., landscape smartphones) */
+@media (max-width: 480px) {
+  nav > div:last-child {
+    display: none;
   }
 }
