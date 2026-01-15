@@ -102,7 +102,7 @@ const ContactMe = () => {
                   <span>
                     <AiFillPhone />
                   </span>
-                  <a href="tel:+917061901868">+91 60025 65574</a>
+                  <a href="tel:+917061901868">+91 88223 68403</a>
                 </div>
 
                 <div>
