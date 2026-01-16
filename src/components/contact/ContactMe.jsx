@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../assests/styles/contactme.module.css"
 import { MdLocationOn } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
@@ -7,6 +7,35 @@ import Iframe from "react-iframe";
 
 
 const ContactMe = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    message: ""
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    // Reset form after submission
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      mobile: "",
+      message: ""
+    });
+  };
+
   return (
     <>
       <section className={styles.contactMe} id="contact">
@@ -16,13 +45,16 @@ const ContactMe = () => {
             {/* form  */}
             <div className={`${styles.contact} ${styles.form}`}>
               <h3>Send a Message</h3>
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <div className={styles.formBox}>
                   <div className={styles.row50}>
                     <div className={styles.inputBox}>
                       <span>First Name</span>
                       <input
                         type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
                         placeholder="Enter Your Name"
                         required
                       />
@@ -32,8 +64,10 @@ const ContactMe = () => {
                       <span>Last Name</span>
                       <input
                         type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
                         placeholder="Enter Your Last Name"
-                        required
                       />
                     </div>
                   </div>
@@ -43,6 +77,9 @@ const ContactMe = () => {
                       <span>Email</span>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Enter your Email address"
                         required
                       />
@@ -52,6 +89,9 @@ const ContactMe = () => {
                       <span>Mobile</span>
                       <input
                         type="number"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
                         placeholder="Enter Your Mobile Number"
                       />
                     </div>
@@ -61,6 +101,9 @@ const ContactMe = () => {
                     <div className={styles.inputBox}>
                       <span>Message</span>
                       <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
                         placeholder="Write your message here..."
                         required
                       ></textarea>
