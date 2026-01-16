@@ -30,7 +30,7 @@
 ## If you have any queries or want to connect, feel free to reach out to me:
 
 - Email: alalu75666@gmail.com
-- Phone Number: +91 6002565574
+- Phone Number: +91 8822368403
 - LinkedIn: <a href="https://www.linkedin.com/in/alal-uddin-066444206/" target="_blank">https://www.linkedin.com/in/alal-uddin-066444206/</a>
 
 ## Thank you! 🤗🤗🤗🤗🤗
