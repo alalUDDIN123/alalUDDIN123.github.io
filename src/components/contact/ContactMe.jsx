@@ -14,6 +14,9 @@ const ContactMe = () => {
     mobile: "",
     message: ""
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,19 +24,55 @@ const ContactMe = () => {
       ...prev,
       [name]: value
     }));
+    setError("");
+    setSuccess("");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    // Reset form after submission
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      mobile: "",
-      message: ""
-    });
+    setLoading(true);
+    setError("");
+    setSuccess("");
+
+    try {
+      const response = await fetch("http://localhost:8050/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstname: formData.firstName,
+          lastname: formData.lastName,
+          email: formData.email,
+          phone: formData.mobile,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.message || "Failed to send message. Please try again.");
+        return;
+      }
+
+      setSuccess("Message sent successfully!");
+      // Reset form after successful submission
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        message: ""
+      });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => setSuccess(""), 5000);
+    } catch (err) {
+      setError("Error sending message: " + err.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -45,11 +84,21 @@ const ContactMe = () => {
             {/* form  */}
             <div className={`${styles.contact} ${styles.form}`}>
               <h3>Send a Message</h3>
+              {error && (
+                <div style={{ color: "red", marginBottom: "15px", padding: "10px", backgroundColor: "#ffe6e6", borderRadius: "4px" }}>
+                  {error}
+                </div>
+              )}
+              {success && (
+                <div style={{ color: "green", marginBottom: "15px", padding: "10px", backgroundColor: "#e6ffe6", borderRadius: "4px" }}>
+                  {success}
+                </div>
+              )}
               <form onSubmit={handleSubmit}>
                 <div className={styles.formBox}>
                   <div className={styles.row50}>
                     <div className={styles.inputBox}>
-                      <span>First Name</span>
+                      <span>First Name *</span>
                       <input
                         type="text"
                         name="firstName"
@@ -74,7 +123,7 @@ const ContactMe = () => {
 
                   <div className={styles.row50}>
                     <div className={styles.inputBox}>
-                      <span>Email</span>
+                      <span>Email *</span>
                       <input
                         type="email"
                         name="email"
@@ -99,7 +148,7 @@ const ContactMe = () => {
 
                   <div className={styles.row100}>
                     <div className={styles.inputBox}>
-                      <span>Message</span>
+                      <span>Message *</span>
                       <textarea
                         name="message"
                         value={formData.message}
@@ -112,7 +161,11 @@ const ContactMe = () => {
 
                   <div className={styles.row100}>
                     <div className={styles.inputBox}>
-                      <input type="submit" value="SEND" />
+                      <input 
+                        type="submit" 
+                        value={loading ? "SENDING..." : "SEND"}
+                        disabled={loading}
+                      />
                     </div>
                   </div>
                 </div>

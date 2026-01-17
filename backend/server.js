@@ -1,7 +1,10 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 const connectDB = require('./db');
+const contactRoutes = require('./routes/contactRoutes');
+const globalErrorHandler = require('./utils/globalErrorMiddleware');
 
 const app = express();
 
@@ -12,13 +15,34 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from public folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Routes
 app.get('/api/health', (req, res) => {
-  res.status(200).json({ message: 'Server is running' });
+  res.status(200).json({ success: true, message: 'Server is running', timestamp: new Date().toISOString() });
 });
+
+// Contact form routes
+app.use('/api/contact', contactRoutes);
+
+// Serve the contact form UI on base route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// 404 - Not Found Route Handler
+app.all('*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
+});
+
+// Global Error Middleware (Must be last)
+app.use(globalErrorHandler);
 
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`📄 Visit http://localhost:${PORT}/ for the contact form`);
+  console.log(`🏥 Health check: http://localhost:${PORT}/api/health`);
 });

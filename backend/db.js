@@ -6,11 +6,11 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log(`MongoDB Connected: ${conn.connection.port}`);
+    console.log(`✅ MongoDB Connected`);
     return conn;
   } catch (error) {
-    console.error(`Error: ${error.message}`);
-    process.exit(1);
+    console.warn(`⚠️  MongoDB not available - Server running in limited mode`);
+    return null;
   }
 };
 
