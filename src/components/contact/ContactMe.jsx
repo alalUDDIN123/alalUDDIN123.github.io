@@ -1,82 +1,134 @@
 import React, { useState } from "react";
-import styles from "../../assests/styles/contactme.module.css"
+import styles from "../../assests/styles/contactme.module.css";
 import { MdLocationOn } from "react-icons/md";
 import { HiMail } from "react-icons/hi";
 import { AiFillPhone, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import Iframe from "react-iframe";
+import Modal from "../ui/Modal";
 
-
-const ContactMe = () => {
-  const [formData, setFormData] = useState({
+// ✅ initial state
+const initialState = {
+  form: {
     firstName: "",
     lastName: "",
     email: "",
     mobile: "",
-    message: ""
-  });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
+    message: "",
+  },
+  loading: false,
+  error: "",
+  success: "",
+  modal: {
+    open: false,
+    type: "", // "loading" | "success" | "error"
+    message: "",
+  }
 
+};
+
+const ContactMe = () => {
+  const [state, setState] = useState(initialState);
+
+  const { form } = state;
+
+  // ✅ handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+
+    setState((prev) => ({
       ...prev,
-      [name]: value
+      form: {
+        ...prev.form,
+        [name]: value,
+      },
+      error: "",
+      success: "",
     }));
-    setError("");
-    setSuccess("");
   };
 
+  // ✅ submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    setError("");
-    setSuccess("");
+
+    setState((prev) => ({
+      ...prev,
+      loading: true,
+      modal: {
+        open: true,
+        type: "loading",
+        message: "Processing your message. Please wait...",
+      },
+    }));
+
 
     try {
-      const response = await fetch("http://localhost:8050/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname: formData.firstName,
-          lastname: formData.lastName,
-          email: formData.email,
-          phone: formData.mobile,
-          message: formData.message,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_BASE_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstname: form.firstName,
+            lastname: form.lastName,
+            email: form.email,
+            phone: form.mobile,
+            message: form.message,
+          }),
+        }
+      );
+
 
       const data = await response.json();
 
       if (!response.ok) {
-        setError(data.message || "Failed to send message. Please try again.");
-        return;
+        throw new Error(data.message || "Failed to send message");
       }
-
-      setSuccess("Message sent successfully!");
-      // Reset form after successful submission
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        mobile: "",
-        message: ""
+      setState({
+        ...initialState,
+        modal: {
+          open: true,
+          type: "success",
+          message: "🎉 Your message has been sent successfully. I’ll get back to you soon.",
+        },
       });
 
-      // Clear success message after 5 seconds
-      setTimeout(() => setSuccess(""), 5000);
+
+      setTimeout(() => {
+        setState(initialState);
+      }, 5000);
     } catch (err) {
-      setError("Error sending message: " + err.message);
-    } finally {
-      setLoading(false);
+      setState((prev) => ({
+        ...prev,
+        loading: false,
+        modal: {
+          open: true,
+          type: "error",
+          message: err.message || "Unable to send message. Please try again.",
+        },
+      }));
+
     }
   };
 
   return (
     <>
+      {/* modal */}
+
+      <Modal
+        open={state.modal.open}
+        type={state.modal.type}
+        message={state.modal.message}
+        onClose={() =>
+          setState((prev) => ({
+            ...prev,
+            modal: { open: false, type: "", message: "" },
+          }))
+        }
+      />
+
+
       <section className={styles.contactMe} id="contact">
         <div className={styles.contactUs}>
           <h2 className={styles.title}>Contact Me</h2>
@@ -84,7 +136,7 @@ const ContactMe = () => {
             {/* form  */}
             <div className={`${styles.contact} ${styles.form}`}>
               <h3>Send a Message</h3>
-              {error && (
+              {/* {error && (
                 <div style={{ color: "red", marginBottom: "15px", padding: "10px", backgroundColor: "#ffe6e6", borderRadius: "4px" }}>
                   {error}
                 </div>
@@ -93,7 +145,7 @@ const ContactMe = () => {
                 <div style={{ color: "green", marginBottom: "15px", padding: "10px", backgroundColor: "#e6ffe6", borderRadius: "4px" }}>
                   {success}
                 </div>
-              )}
+              )} */}
               <form onSubmit={handleSubmit}>
                 <div className={styles.formBox}>
                   <div className={styles.row50}>
@@ -102,7 +154,7 @@ const ContactMe = () => {
                       <input
                         type="text"
                         name="firstName"
-                        value={formData.firstName}
+                        value={form.firstName}
                         onChange={handleChange}
                         placeholder="Enter Your Name"
                         required
@@ -114,7 +166,7 @@ const ContactMe = () => {
                       <input
                         type="text"
                         name="lastName"
-                        value={formData.lastName}
+                        value={form.lastName}
                         onChange={handleChange}
                         placeholder="Enter Your Last Name"
                       />
@@ -127,7 +179,7 @@ const ContactMe = () => {
                       <input
                         type="email"
                         name="email"
-                        value={formData.email}
+                        value={form.email}
                         onChange={handleChange}
                         placeholder="Enter your Email address"
                         required
@@ -139,7 +191,7 @@ const ContactMe = () => {
                       <input
                         type="number"
                         name="mobile"
-                        value={formData.mobile}
+                        value={form.mobile}
                         onChange={handleChange}
                         placeholder="Enter Your Mobile Number"
                       />
@@ -151,7 +203,7 @@ const ContactMe = () => {
                       <span>Message *</span>
                       <textarea
                         name="message"
-                        value={formData.message}
+                        value={form.message}
                         onChange={handleChange}
                         placeholder="Write your message here..."
                         required
@@ -161,10 +213,9 @@ const ContactMe = () => {
 
                   <div className={styles.row100}>
                     <div className={styles.inputBox}>
-                      <input 
-                        type="submit" 
-                        value={loading ? "SENDING..." : "SEND"}
-                        disabled={loading}
+                      <input
+                        type="submit"
+                        value={"SEND"}
                       />
                     </div>
                   </div>
@@ -209,7 +260,6 @@ const ContactMe = () => {
                   <a href="https://www.linkedin.com/in/alal-uddin-066444206/" target="_blank" rel="noreferrer"> LinkedIn</a>
 
                 </div>
-
                 <div>
                   <span>
                     <AiFillGithub />
