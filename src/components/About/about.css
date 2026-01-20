@@ -1,7 +1,6 @@
 .__heading_____ {
   font-size: 5rem;
   margin-bottom: 3rem;
-  text-align: center;
   color: #ffff !important;
 }
 .__heading_____ span {
@@ -33,7 +32,7 @@
   text-align: justify;
 }
 
-.__about__content__ h3 {
+.__about__content__ h2 {
   font-size: 2.6rem;
   color: #ffff;
 }
@@ -79,7 +78,7 @@
     margin-top: 15%;
   }
 
-  .__about__content__ h3 {
+  .__about__content__ h2 {
     font-size: 25px;
   }
 
@@ -123,7 +122,7 @@
     margin-top: 15%;
   }
 
-  .__about__content__ h3 {
+  .__about__content__ h2 {
     font-size: 25px !important;
   }
 
@@ -162,7 +161,7 @@
     margin-top: 10%;
   }
 
-  .__about__content__ h3 {
+  .__about__content__ h2 {
     font-size: 30px;
   }
 
@@ -202,7 +201,7 @@
     margin-top: 8%;
   }
 
-  .__about__content__ h3 {
+  .__about__content__ h2 {
     font-size: 35px;
   }
 

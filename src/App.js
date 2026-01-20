@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import Preloader from "../src/components/Pre";
 // import Navbar from "./components/navbar/Navbar";
 import Home from "./components/Home/Home";
-import Footer from "./components/Footer";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Preloader from "./components/Preloader/Preloader";
 import NavBar from "./components/navbar/navb";
 import ScrollToTop from "./components/ScrollToTop";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [load, upadateLoad] = useState(true);

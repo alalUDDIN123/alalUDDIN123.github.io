@@ -85,6 +85,8 @@ const ContactMe = () => {
       if (!response.ok) {
         throw new Error(data.message || "Failed to send message");
       }
+
+      console.log("Response data:", data);
       setState({
         ...initialState,
         modal: {
